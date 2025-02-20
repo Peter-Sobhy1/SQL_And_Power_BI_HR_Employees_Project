@@ -55,7 +55,7 @@ FROM hr
 WHERE termdate IS NULL
 GROUP BY gender;
 ```
-
+![Gender Distribution](assets/Gender%20Distribution.png)
 
 Insights:
 
@@ -70,6 +70,8 @@ WHERE termdate IS NULL
 GROUP BY race
 ORDER BY count DESC; 
 ```
+![Race Distribution](assets/race%20distribution.png)
+
 Insights:
 
 The majority of employees identify as White, followed by Black or African American and Asian.
@@ -99,6 +101,8 @@ GROUP BY
             
 ORDER BY age_group;
 ```
+![Age Group Distribution By Gender](assets/Age%20Distribution%20by%20gender.png)
+
 Insights:
 
 The largest age group is 30-39, followed by 40-49. The workforce is relatively young, with fewer employees aged 60 and above.
@@ -111,21 +115,25 @@ FROM hr
 WHERE termdate IS NULL
 GROUP BY [location];
 ```
+![Headquarters vs Remote Employees](assets/Headquarter%20VS%20Remotepng.png)
+
 Insights:
 
-A significant portion of employees work remotely, indicating a shift towards flexible work arrangements.
+More than 25% of Employees works remotely,showing flexible work arrangements.
 
 ### 5. Average Length of Employment for Terminated Employees
 This query calculates the average tenure of employees who have left the company.
 
 ```sql
-SELECT AVG(DATEDIFF(YEAR, hire_date, termdate)) AS avg_length_of_employment
+SELECT AVG(DATEDIFF(YEAR, hire_date, termdate)) AS 'avg length of employment'
 FROM hr
 WHERE termdate IS NOT NULL;
 ```
-Insights:
+| avg length of employment |
+|---|
+| 10 |
 
-The average length of employment for terminated employees is approximately 7 years.
+Average length of employment is 10 years
 
 ### 6. Gender Distribution Across Departments
 This query provides a breakdown of gender distribution by department.
@@ -137,6 +145,8 @@ WHERE termdate IS NULL
 GROUP BY department, gender
 ORDER BY department;
 ```
+![Gender By Department](assets/Gender%20by%20Department.png)
+
 Insights:
 
 Engineering and Accounting have the highest number of employees, with a balanced gender distribution across most departments.
@@ -150,9 +160,19 @@ FROM hr
 WHERE termdate IS NULL GROUP BY jobtitle
 ORDER BY count DESC;
 ```
-Insights:
+| Job Title                     | Count |
+|-------------------------------|------:|
+| Research Assistant II         |   634 |
+| Business Analyst              |   574 |
+| Human Resources Analyst II    |   495 |
+| Research Assistant I          |   434 |
+| Account Executive             |   409 |
+| Staff Accountant I            |   375 |
+| Data Visualization Specialist |   366 |
+| Human Resources Analyst       |   338 |
+| Software Engineer I           |   323 |
+| Systems Administrator I       |   316 |
 
-The most common job titles are Data Analyst, Software Engineer, and Accountant.
 
 ### 8. Department with the Highest Turnover Rate
 
@@ -164,6 +184,7 @@ WHERE termdate IS NOT NULL
 GROUP BY department
 ORDER BY count DESC;
 ```
+![Turnover By Department](assets/Department%20turn%20over.png)
 Insights:
 
 Engineering has the highest turnover rate, followed by Accounting and Sales.
@@ -177,6 +198,8 @@ WHERE termdate IS NULL
 GROUP BY location_city, location_state
 ORDER BY count DESC;
 ```
+![Employyes By State](assets/Employees%20Location.png)
+
 Insights:
 
 The majority of employees are located in major cities like New York, Chicago, and Los Angeles.
@@ -195,6 +218,8 @@ SELECT year, hires, terminations, hires - terminations AS net_change
 FROM sub 
 ORDER BY year;
 ```
+![Change in Headcount Per Year](assets/change%20in%20headcount.png)
+
 Insights:
 
 The company has experienced steady growth, with a positive net change in employee count each year.
@@ -209,6 +234,21 @@ FROM hr
 GROUP BY department
 ORDER BY department;
 ```
+| Department             | Tenure |
+|------------------------|-------:|
+| Accounting             |     10 |
+| Auditing               |      9 |
+| Business Development   |     10 |
+| Engineering            |     10 |
+| Human Resources        |      9 |
+| Legal                  |      9 |
+| Marketing              |     10 |
+| Product Management     |      9 |
+| Research and Development |   10 |
+| Sales                  |     11 |
+| Services               |     10 |
+| Support                |     10 |
+| Training               |      9 |
 
 Insights:
 
@@ -231,7 +271,7 @@ WHERE termdate IS NULL;
 SELECT COUNT(DISTINCT department) AS 'Total Departments'
 FROM hr;
 ```
-| Total Departments  |
+| Total Departments |
 |---|
 | 13 |
 
