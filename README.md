@@ -103,6 +103,7 @@ ORDER BY age_group;
 ```
 ![Age Group Distribution By Gender](assets/Age%20Distribution%20by%20gender.png)
 
+
 Insights:
 
 The largest age group is 30-39, followed by 40-49. The workforce is relatively young, with fewer employees aged 60 and above.
