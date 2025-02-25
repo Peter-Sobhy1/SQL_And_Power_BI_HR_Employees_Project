@@ -39,6 +39,7 @@ SET termdate = CASE
     WHEN termdate LIKE '%-%' THEN convert(date,termdate,111)
     ELSE NULL
     END;
+    
 
 --changing the data type to date
 ALTER TABLE [Human Resources]
