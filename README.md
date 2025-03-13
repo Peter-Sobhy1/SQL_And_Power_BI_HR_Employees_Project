@@ -306,3 +306,10 @@ Insights From the analysis, several key insights emerged:
 ## Closing Thoughts
 
 This project provided valuable insights into the company's workforce dynamics. By leveraging SQL and Power BI, I was able to uncover trends and patterns that can inform HR strategies, such as improving retention and optimizing workforce planning. This exploration highlights the importance of data-driven decision-making in HR management.
+
+
+
+
+Let's stay in touch!
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/peter-sobhy/)
