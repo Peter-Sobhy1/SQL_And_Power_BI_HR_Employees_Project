@@ -43,6 +43,9 @@ For this HR analytics project, I leveraged the following tools:
 
 **Git & GitHub:** Essential for version control and sharing my SQL scripts and analysis.
 
+# Report Link
+https://app.powerbi.com/view?r=eyJrIjoiOWU3MzZkMzAtZGU3NS00M2ZkLWJhNmMtMzhhZDk1MTkxMjBlIiwidCI6IjJiYjZlNWJjLWMxMDktNDdmYi05NDMzLWMxYzZmNGZhMzNmZiIsImMiOjl9
+
 # The Analysis
 
 Each query for this project aimed at investigating specific aspects of the HR data. Here’s how I approached each question:
